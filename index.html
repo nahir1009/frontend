@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard LED</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas> 
+    <div class="container">
+        <h1>Registro de LEDs</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Timestamp</th>
+                    <th>Estado del LED</th>
+                </tr>
+            </thead>
+            <tbody id="ledData">
+                <tr>
+                    <td>1</td>
+                    <td>2024-10-27 10:00</td>
+                    <td class="led-on">Encendido</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2024-10-27 10:05</td>
+                    <td class="led-off">Apagado</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>2024-10-27 10:10</td>
+                    <td class="led-on">Encendido</td>
+                </tr>
+                <!-- Más filas pueden ser añadidas aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="background.js"></script> 
+</body>
+</html>
