@@ -16,7 +16,7 @@ for (let i = 0; i < shapeCount; i++) {
         speedX: Math.random() * 3 - 1.5, 
         speedY: Math.random() * 3 - 1.5, 
         color: `hsl(${Math.random() * 360}, 100%, 50%)`, 
-        type: shapeType // Guardar el tipo de figura
+        type: shapeType 
     });
 }
 
@@ -46,7 +46,7 @@ function drawShape(shape) {
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height); 
     shapes.forEach(shape => {
-        drawShape(shape); // Dibuja la figura
+        drawShape(shape); 
         shape.x += shape.speedX;
         shape.y += shape.speedY;
 
@@ -58,12 +58,12 @@ function animate() {
         }
     });
 
-    requestAnimationFrame(animate); // Llamar a la función de animación nuevamente
+    requestAnimationFrame(animate); 
 }
 
-animate(); // Iniciar la animación
+animate(); 
 
-// Ajustar el canvas al redimensionar la ventana
+// Ajustar el canvas 
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;

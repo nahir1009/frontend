@@ -17,7 +17,7 @@ async function fetchData() {
 
         data.forEach(row => {
             const ledStatusText = row.led_status ? 'Encendido' : 'Apagado';
-            const ledStatusColor = row.led_status ? 'led-on' : 'led-off'; // Clase para estado del LED
+            const ledStatusColor = row.led_status ? 'led-on' : 'led-off'; 
             
             const tr = document.createElement('tr');
             tr.innerHTML = `
@@ -26,7 +26,7 @@ async function fetchData() {
                 <td class="${ledStatusColor}">${ledStatusText}</td> <!-- Aplicando la clase -->
             `;
 
-            // Agregar evento de mouseover y mouseout para aplicar brillo
+          
             tr.addEventListener('mouseover', () => {
                 tr.querySelector('td').classList.add(ledStatusColor === 'led-on' ? 'blink-green' : 'blink-red');
             });
