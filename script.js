@@ -54,7 +54,10 @@ const renderTable = (data) => {
 
 const main = () => {
     window.onload = fetchLedData;
-    refreshButton.addEventListener('click', fetchLedData);
+    refreshButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        fetchLedData();
+    });
 };
 
 main();
