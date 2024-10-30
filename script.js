@@ -1,8 +1,7 @@
 const BASE_URL = 'https://serverwokwi.onrender.com';
 const GET_DATA_PATH = '/get_data';
 const tableBody = document.getElementById('ledData');
-const refreshButton = document.getElementById('refreshButton'); // Obtener el botón
-
+const refreshButton = document.getElementById('refreshButton'); 
 const fetchLedData = async () => {
     const API_URL = `${BASE_URL}${GET_DATA_PATH}`;
     const FETCH_OPTIONS = { 
