@@ -6,7 +6,7 @@ const ledStatusChartCanvas = document.getElementById('ledStatusChart').getContex
 
 let ledStatusChart;
 
-// Configuración inicial del gráfico de estado de LEDs
+
 const setupChart = () => {
     const data = {
         labels: ['Encendido', 'Apagado'],
@@ -32,7 +32,6 @@ const updateChart = (data) => {
     ledStatusChart.update();
 };
 
-
 const fetchLedData = async () => {
     const API_URL = `${BASE_URL}${GET_DATA_PATH}`;
     const FETCH_OPTIONS = { method: 'GET' };
@@ -55,7 +54,7 @@ const fetchLedData = async () => {
     }
 };
 
-// Función para renderizar la tabla de datos de LEDs
+
 const renderTable = (data) => {
     tableBody.innerHTML = '';
 
@@ -70,6 +69,7 @@ const renderTable = (data) => {
             <td class="${ledStatusColor}">${ledStatusText}</td>
         `;
 
+       
         tr.addEventListener('mouseover', () => {
             tr.querySelector('td').classList.add(ledStatusColor === 'led-on' ? 'blink-green' : 'blink-red');
         });
